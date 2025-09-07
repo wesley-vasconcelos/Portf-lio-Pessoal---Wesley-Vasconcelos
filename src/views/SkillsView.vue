@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <!-- Hero Section -->
+    
     <section class="skills-hero section">
       <div class="hero-background">
         <div class="floating-elements">
@@ -42,7 +42,7 @@
       </div>
     </section>
 
-    <!-- Main Skills Section -->
+    
     <section class="main-skills section">
       <div class="container">
         <div class="section-header">
@@ -141,7 +141,7 @@
       </div>
     </section>
 
-    <!-- Tools & Others -->
+    
     <section class="tools-section section">
       <div class="container">
         <h2 class="section-title">Ferramentas & Outras Tecnologias</h2>
