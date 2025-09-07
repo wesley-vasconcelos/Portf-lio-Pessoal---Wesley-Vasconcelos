@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <div class="home">
-    <!-- Hero Section -->
+    
     <section class="hero section">
       <div class="hero-background">
         <div class="floating-elements">
@@ -116,7 +116,7 @@ import { RouterLink } from 'vue-router'
       </div>
     </section>
 
-    <!-- Skills Preview -->
+    
     <section class="skills-preview section">
       <div class="container">
         <div class="skills-header">
@@ -225,7 +225,7 @@ import { RouterLink } from 'vue-router'
       </div>
     </section>
 
-    <!-- Projects Preview -->
+    
     <section class="projects-preview section">
       <div class="container">
         <h2 class="section-title">Projetos em Destaque</h2>
@@ -292,7 +292,7 @@ import { RouterLink } from 'vue-router'
       </div>
     </section>
 
-    <!-- Experience Preview -->
+    
     <section class="experience-preview section">
       <div class="container">
         <h2 class="section-title">Experiência Recente</h2>

@@ -1000,14 +1000,16 @@ const getSubjectText = (subject: string): string => {
 
   .form-container {
     padding: 2rem 1.5rem;
+    margin: 0 0.5rem;
   }
 
   .availability-card {
     padding: 2rem 1.5rem;
+    margin: 0 0.5rem;
   }
 
   .contact-card {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .contact-icon {
@@ -1018,6 +1020,17 @@ const getSubjectText = (subject: string): string => {
   .contact-icon svg {
     width: 30px;
     height: 30px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
   }
 }
 </style>

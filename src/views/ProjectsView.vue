@@ -596,5 +596,13 @@
     height: 60px;
     font-size: 2rem;
   }
+
+  .project-card {
+    margin: 0 0.5rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="experience">
-    <!-- Hero Section -->
+    
     <section class="experience-hero section">
       <div class="hero-background">
         <div class="floating-elements">
@@ -42,7 +42,7 @@
       </div>
     </section>
 
-    <!-- Timeline Section -->
+    
     <section class="timeline-section section">
       <div class="container">
         <div class="timeline-header">
@@ -52,7 +52,7 @@
           </p>
         </div>
         <div class="timeline">
-          <!-- ISH Tecnologia -->
+          
           <div class="timeline-item">
             <div class="timeline-marker current">1</div>
             <div class="timeline-content">
@@ -83,7 +83,7 @@
             </div>
           </div>
 
-          <!-- Banco Arbi -->
+          
           <div class="timeline-item">
             <div class="timeline-marker">2</div>
             <div class="timeline-content">
@@ -115,7 +115,7 @@
             </div>
           </div>
 
-          <!-- Petz -->
+          
           <div class="timeline-item">
             <div class="timeline-marker">3</div>
             <div class="timeline-content">
@@ -148,7 +148,7 @@
             </div>
           </div>
 
-          <!-- Luby Software -->
+          
           <div class="timeline-item">
             <div class="timeline-marker">4</div>
             <div class="timeline-content">
@@ -178,7 +178,7 @@
             </div>
           </div>
 
-          <!-- SoftWrap -->
+          
           <div class="timeline-item">
             <div class="timeline-marker">5</div>
             <div class="timeline-content">

@@ -211,4 +211,19 @@ main {
     padding: 0.75rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .btn {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
 </style>

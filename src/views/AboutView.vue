@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <!-- Hero Section -->
     <section class="about-hero section">
       <div class="hero-background">
         <div class="floating-elements">
@@ -103,7 +102,6 @@
       </div>
     </section>
 
-    <!-- Education Section -->
     <section class="education section">
       <div class="container">
         <div class="section-header">
@@ -159,7 +157,6 @@
           </div>
         </div>
 
-        <!-- Continuous Learning -->
         <div class="learning-section">
           <h3 class="learning-title">Aprendizado Contínuo</h3>
           <div class="learning-grid">
@@ -184,7 +181,6 @@
       </div>
     </section>
 
-    <!-- Values Section -->
     <section class="values section">
       <div class="container">
         <div class="section-header">
@@ -242,7 +238,6 @@
       </div>
     </section>
 
-    <!-- Recommendations Section -->
     <section class="recommendations section">
       <div class="container">
         <div class="section-header">
@@ -297,7 +292,6 @@
           </div>
         </div>
 
-        <!-- Additional Info -->
         <div class="additional-info">
           <div class="info-card">
             <div class="info-icon">⭐</div>
