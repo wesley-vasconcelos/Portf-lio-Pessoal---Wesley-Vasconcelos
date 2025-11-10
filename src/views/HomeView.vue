@@ -28,7 +28,7 @@ import { RouterLink } from 'vue-router'
               <span class="typing-effect">Desenvolvedor Front-end Sênior</span>
             </h2>
             <p class="hero-description">
-              Especialista em <strong>Vue.js</strong>, <strong>React.js</strong> e tecnologias modernas de desenvolvimento web.
+              Focado em <strong>Vue.js</strong>, <strong>React.js</strong> e tecnologias modernas de desenvolvimento web.
               Com mais de <strong>6 anos de experiência</strong>, transformo ideias em interfaces incríveis e funcionais
               que proporcionam experiências digitais memoráveis.
             </p>
@@ -38,7 +38,7 @@ import { RouterLink } from 'vue-router'
                 <span class="stat-label">Anos de Experiência</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number gradient-text">50+</span>
+                <span class="stat-number gradient-text">20+</span>
                 <span class="stat-label">Projetos Entregues</span>
               </div>
               <div class="stat-item">
@@ -943,7 +943,7 @@ import { RouterLink } from 'vue-router'
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -1008,6 +1008,23 @@ import { RouterLink } from 'vue-router'
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: var(--background-glass);
+  color: var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--background-dark);
+  transform: translateY(-2px);
 }
 
 .project-link {
@@ -1145,7 +1162,6 @@ import { RouterLink } from 'vue-router'
   text-align: center;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero-content {
     grid-template-columns: 1fr;
@@ -1160,6 +1176,11 @@ import { RouterLink } from 'vue-router'
 
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
   }
 }
 
@@ -1179,6 +1200,28 @@ import { RouterLink } from 'vue-router'
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .project-card.card {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .experience-card {
@@ -1216,7 +1259,47 @@ import { RouterLink } from 'vue-router'
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    gap: 1.25rem;
+  }
+
+  .project-card.card {
+    padding: 1.25rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-type {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-link {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
   }
 
   .skill-icon {

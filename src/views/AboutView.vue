@@ -83,7 +83,7 @@
               </div>
               <div class="stat-card floating">
                 <div class="stat-icon">🚀</div>
-                <h3>50+</h3>
+                <h3>20+</h3>
                 <p>Projetos Entregues</p>
               </div>
               <div class="stat-card floating">
@@ -1077,7 +1077,6 @@
   line-height: 1.6;
 }
 
-/* Animations */
 @keyframes floating {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -1088,7 +1087,6 @@
   50% { transform: scale(1.05); }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .about-content {
     grid-template-columns: 1fr;

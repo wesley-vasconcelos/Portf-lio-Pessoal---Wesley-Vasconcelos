@@ -620,13 +620,11 @@
   box-shadow: var(--shadow-glow);
 }
 
-/* Animations */
 @keyframes floating {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);

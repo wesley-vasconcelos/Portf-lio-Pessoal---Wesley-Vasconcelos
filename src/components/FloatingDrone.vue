@@ -55,7 +55,6 @@ const updateScroll = () => {
   scrollY.value = window.scrollY
   windowHeight.value = window.innerHeight
 
-  // Detectar seção atual baseada no scroll
   const scrollProgress = scrollY.value / (document.documentElement.scrollHeight - windowHeight.value)
 
   if (scrollProgress < 0.2) {
@@ -91,18 +90,14 @@ const droneStyle = computed(() => {
   const documentHeight = document.documentElement.scrollHeight
   const scrollProgress = scrollY.value / (documentHeight - windowHeight.value)
 
-  // Posição vertical baseada no progresso do scroll
-  const baseTop = 15 + (scrollProgress * 60) // Move de 15vh até 75vh
+  const baseTop = 15 + (scrollProgress * 60)
 
-  // Movimento flutuante suave
   const time = Date.now() * 0.001
   const floatingY = Math.sin(time) * 8
   const floatingX = Math.cos(time * 0.7) * 5
 
-  // Rotação baseada na velocidade do scroll
   const rotation = Math.sin(scrollY.value * 0.005) * 8
 
-  // Movimento lateral baseado no scroll
   const lateralMovement = Math.sin(scrollProgress * Math.PI * 2) * 15
 
   return {
@@ -247,7 +242,6 @@ const droneStyle = computed(() => {
   animation: shadowPulse 3s ease-in-out infinite;
 }
 
-/* Animações */
 @keyframes hover {
   0%, 100% {
     transform: translateY(0px);
@@ -288,7 +282,6 @@ const droneStyle = computed(() => {
   }
 }
 
-/* Efeitos especiais baseados no scroll */
 .floating-drone:hover .drone-led {
   background: #ff6b6b;
   box-shadow: 0 0 8px #ff6b6b;
@@ -298,14 +291,12 @@ const droneStyle = computed(() => {
   background: rgba(255, 107, 107, 0.4);
 }
 
-/* Responsividade */
 @media (max-width: 1200px) {
   .floating-drone {
     display: none;
   }
 }
 
-/* Efeitos especiais por seção */
 .section-hero .drone-led {
   background: #00d4ff;
   box-shadow: 0 0 8px #00d4ff;
@@ -363,7 +354,6 @@ const droneStyle = computed(() => {
   animation-duration: 0.12s;
 }
 
-/* Efeito de entrada */
 .floating-drone {
   animation: droneEnter 2s ease-out;
 }
@@ -379,7 +369,6 @@ const droneStyle = computed(() => {
   }
 }
 
-/* Efeito de trail/rastro */
 .floating-drone::after {
   content: '';
   position: absolute;

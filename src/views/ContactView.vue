@@ -199,7 +199,8 @@
           </div>
           <p>
             Atualmente estou <strong>aberto a novas oportunidades</strong> como Desenvolvedor Front-end Sênior.
-            Tenho interesse especial em projetos que envolvam <strong>Vue.js 3</strong>, <strong>React.js</strong> e tecnologias modernas.
+            Tenho interesse especial em projetos que envolvam <strong>Vue.js 3</strong>, <strong>React.js</strong>
+            e tecnologias modernas.
           </p>
           <div class="availability-details">
             <div class="detail">
@@ -253,19 +254,16 @@ const submitMessage = ref('')
 const submitStatus = ref('')
 
 const submitForm = () => {
-  // Verificar se já está enviando
   if (isSubmitting.value) return
 
   isSubmitting.value = true
   submitMessage.value = ''
 
-  // Validar campos obrigatórios
   if (!form.name.trim() || !form.email.trim() || !form.subject || !form.message.trim()) {
     submitMessage.value = 'Por favor, preencha todos os campos obrigatórios.'
     submitStatus.value = 'error'
     isSubmitting.value = false
 
-    // Auto-clear error message
     setTimeout(() => {
       submitMessage.value = ''
       submitStatus.value = ''
@@ -273,14 +271,12 @@ const submitForm = () => {
     return
   }
 
-  // Validar email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(form.email.trim())) {
     submitMessage.value = 'Por favor, insira um email válido.'
     submitStatus.value = 'error'
     isSubmitting.value = false
 
-    // Auto-clear error message
     setTimeout(() => {
       submitMessage.value = ''
       submitStatus.value = ''
@@ -288,7 +284,6 @@ const submitForm = () => {
     return
   }
 
-  // Criar mensagem para WhatsApp
   const name = form.name.trim()
   const email = form.email.trim()
   const company = form.company.trim()
@@ -308,36 +303,28 @@ ${message}
 ---
 Enviado através do formulário de contato do portfólio`
 
-  // Número do WhatsApp
   const whatsappNumber = '5511985912734'
 
   try {
-    // Criar URL do WhatsApp
     const encodedMessage = encodeURIComponent(whatsappMessage)
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
 
-    // Mostrar mensagem de sucesso primeiro
     submitMessage.value = '✅ Redirecionando para o WhatsApp... Sua mensagem foi preparada!'
     submitStatus.value = 'success'
 
-    // Reset form
     form.name = ''
     form.email = ''
     form.company = ''
     form.subject = ''
     form.message = ''
 
-    // Aguardar um pouco e então redirecionar
     setTimeout(() => {
-      // Tentar abrir em nova aba primeiro
       try {
         const newWindow = window.open(whatsappUrl, '_blank')
         if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-          // Se falhou, redirecionar na mesma aba
           window.location.href = whatsappUrl
         }
       } catch (e) {
-        // Fallback: redirecionar na mesma aba
         window.location.href = whatsappUrl
       }
     }, 1000)
@@ -349,7 +336,6 @@ Enviado através do formulário de contato do portfólio`
 
   isSubmitting.value = false
 
-  // Clear message after 5 seconds
   setTimeout(() => {
     submitMessage.value = ''
     submitStatus.value = ''
@@ -847,6 +833,8 @@ const getSubjectText = (subject: string): string => {
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .availability-card p strong {
@@ -912,7 +900,6 @@ const getSubjectText = (subject: string): string => {
   }
 }
 
-/* Animations */
 @keyframes floating {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -927,7 +914,6 @@ const getSubjectText = (subject: string): string => {
   animation: spin 1s linear infinite;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -946,15 +932,29 @@ const getSubjectText = (subject: string): string => {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 1rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 1rem;
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
@@ -964,13 +964,33 @@ const getSubjectText = (subject: string): string => {
   }
 
   .form-container {
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem;
     margin: 0 1rem;
   }
 
   .availability-card {
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem;
     margin: 0 1rem;
+  }
+
+  .availability-card h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .status-indicator {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .availability-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
   }
 
   .availability-details {
@@ -979,9 +999,22 @@ const getSubjectText = (subject: string): string => {
   }
 
   .detail {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .detail-content {
+    text-align: left;
+  }
+
+  .detail-content strong {
+    font-size: 0.8rem;
+  }
+
+  .detail-content span {
+    font-size: 0.9rem;
   }
 
   .floating-element {
@@ -990,47 +1023,154 @@ const getSubjectText = (subject: string): string => {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 0;
   }
 
   .form-container {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
     margin: 0 0.5rem;
   }
 
   .availability-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
     margin: 0 0.5rem;
   }
 
+  .availability-card h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+
+  .status-indicator {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    gap: 0.5rem;
+  }
+
+  .availability-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+
+  .availability-details {
+    gap: 0.8rem;
+  }
+
+  .detail {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .detail-icon {
+    font-size: 1.2rem;
+  }
+
+  .detail-content strong {
+    font-size: 0.75rem;
+  }
+
+  .detail-content span {
+    font-size: 0.8rem;
+  }
+
   .contact-card {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9rem;
+    word-break: break-all;
   }
 
   .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
   .contact-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
     font-size: 16px;
+    padding: 0.8rem;
   }
 
   .submit-btn {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .availability-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .availability-card p {
+    font-size: 0.85rem;
+  }
+
+  .detail {
+    padding: 0.8rem;
+  }
+
+  .detail-content strong {
+    font-size: 0.7rem;
+  }
+
+  .detail-content span {
+    font-size: 0.75rem;
+  }
+
+  .contact-card p {
+    font-size: 0.8rem;
   }
 }
 </style>

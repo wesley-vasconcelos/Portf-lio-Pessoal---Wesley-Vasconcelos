@@ -22,7 +22,7 @@
           </p>
           <div class="hero-stats">
             <div class="stat-item">
-              <span class="stat-number gradient-text">5</span>
+              <span class="stat-number gradient-text">6</span>
               <span class="stat-label">Empresas</span>
             </div>
             <div class="stat-item">
@@ -30,7 +30,7 @@
               <span class="stat-label">Anos</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number gradient-text">50+</span>
+              <span class="stat-number gradient-text">20+</span>
               <span class="stat-label">Projetos</span>
             </div>
             <div class="stat-item">
@@ -52,19 +52,52 @@
           </p>
         </div>
         <div class="timeline">
-          
+
           <div class="timeline-item">
             <div class="timeline-marker current">1</div>
             <div class="timeline-content">
               <div class="job-header">
                 <h3>Desenvolvedor Front-end Sênior</h3>
-                <span class="company">ISH Tecnologia</span>
+                <span class="company">upLexis</span>
                 <span class="period">Dezembro 2024 - Presente</span>
                 <span class="location">São Paulo, Brasil · Remoto</span>
               </div>
               <div class="job-description">
                 <p>
-                  Na ISH, desenvolvo a interface de um sistema de coleta de dados e atualizo o código 
+                  Atuo como Desenvolvedor Front-end Sênior na upLexis, sendo responsável por validar e repassar demandas para freelancers, além de oferecer suporte técnico à equipe interna em todas as frentes de desenvolvimento front-end dos produtos.
+                </p>
+                <ul class="achievements">
+                  <li>Validação e repasse de demandas para freelancers</li>
+                  <li>Suporte técnico à equipe interna de front-end</li>
+                  <li>Colaboração com time de back-end no planejamento</li>
+                  <li>Gerenciamento de cards e sprints no Jira</li>
+                  <li>Acompanhamento de GMUDs e sustentação de projetos</li>
+                  <li>Manutenção da qualidade e performance das aplicações</li>
+                </ul>
+              </div>
+              <div class="technologies">
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Jira</span>
+                <span class="tech-tag">GMUD</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="timeline-item">
+            <div class="timeline-marker">2</div>
+            <div class="timeline-content">
+              <div class="job-header">
+                <h3>Desenvolvedor Front-end Sênior</h3>
+                <span class="company">ISH Tecnologia</span>
+                <span class="period">Dezembro 2024 - Dezembro 2024</span>
+                <span class="location">São Paulo, Brasil · Remoto</span>
+              </div>
+              <div class="job-description">
+                <p>
+                  Na ISH, desenvolvo a interface de um sistema de coleta de dados e atualizo o código
                   de Vue.js 2 para Vue.js 3, melhorando a usabilidade e eficiência.
                 </p>
                 <ul class="achievements">
@@ -83,9 +116,9 @@
             </div>
           </div>
 
-          
+
           <div class="timeline-item">
-            <div class="timeline-marker">2</div>
+            <div class="timeline-marker">3</div>
             <div class="timeline-content">
               <div class="job-header">
                 <h3>Desenvolvedor Front-end</h3>
@@ -115,9 +148,9 @@
             </div>
           </div>
 
-          
+
           <div class="timeline-item">
-            <div class="timeline-marker">3</div>
+            <div class="timeline-marker">4</div>
             <div class="timeline-content">
               <div class="job-header">
                 <h3>Desenvolvedor Front-end Pleno</h3>
@@ -148,9 +181,9 @@
             </div>
           </div>
 
-          
+
           <div class="timeline-item">
-            <div class="timeline-marker">4</div>
+            <div class="timeline-marker">5</div>
             <div class="timeline-content">
               <div class="job-header">
                 <h3>Desenvolvedor Front-end</h3>
@@ -178,9 +211,9 @@
             </div>
           </div>
 
-          
+
           <div class="timeline-item">
-            <div class="timeline-marker">5</div>
+            <div class="timeline-marker">6</div>
             <div class="timeline-content">
               <div class="job-header">
                 <h3>Desenvolvedor Front-end</h3>
@@ -556,7 +589,6 @@
   box-shadow: var(--shadow-glow);
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
@@ -570,61 +602,121 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
   .hero-description {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 0 1rem;
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-top: 2rem;
   }
 
   .stat-item {
-    padding: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .timeline::before {
-    left: 20px;
+    left: 15px;
     width: 2px;
   }
 
   .timeline-item {
-    padding-left: 70px;
+    padding-left: 60px;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 1rem;
   }
 
   .timeline-marker {
-    left: 10px;
+    left: 5px;
     width: 20px;
     height: 20px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .timeline-content {
-    padding: 2rem;
+    padding: 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   }
 
   .job-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
   }
 
   .company {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .period {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .location {
+    font-size: 0.85rem;
+  }
+
+  .job-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .achievements {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .achievements li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .achievements li::before {
+    font-size: 1rem;
   }
 
   .technologies {
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
 
   .tech-tag {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
   }
 
   .floating-element {
@@ -633,28 +725,153 @@
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-item {
+    padding: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    padding: 0;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-marker {
+    left: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 0.6rem;
   }
 
   .timeline-content {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    margin-right: 0;
+  }
+
+  .job-header {
+    margin-bottom: 1rem;
   }
 
   .job-header h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
   }
 
   .company {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .period {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .location {
+    font-size: 0.75rem;
+  }
+
+  .job-description p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .achievements {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .achievements li {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+    padding-left: 1.2rem;
+  }
+
+  .achievements li::before {
+    font-size: 0.9rem;
+  }
+
+  .technologies {
+    gap: 0.3rem;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .job-header h3 {
     font-size: 1.1rem;
+  }
+
+  .company {
+    font-size: 0.95rem;
+  }
+
+  .job-description p {
+    font-size: 0.85rem;
+  }
+
+  .achievements li {
+    font-size: 0.75rem;
   }
 }
 </style>

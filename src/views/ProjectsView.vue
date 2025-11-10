@@ -221,7 +221,6 @@
 </template>
 
 <script setup lang="ts">
-// No additional logic needed for this static page
 </script>
 
 <style scoped>
@@ -386,7 +385,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 3rem;
 }
 
@@ -535,21 +534,19 @@
   height: 16px;
 }
 
-/* Animations */
 @keyframes floating {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 1024px) {
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
 }
@@ -558,7 +555,7 @@
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .section-title {
     font-size: 2.5rem;
   }
@@ -574,7 +571,25 @@
   }
 
   .project-card {
-    margin: 0 1rem;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .project-card.card {
+    padding: 1.5rem;
+  }
+
+  .project-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .floating-element {
@@ -586,9 +601,17 @@
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-card.card {
+    padding: 1.25rem;
   }
 
   .project-icon {
@@ -597,12 +620,37 @@
     font-size: 2rem;
   }
 
-  .project-card {
-    margin: 0 0.5rem;
+  .project-header {
+    margin-bottom: 1.25rem;
   }
 
-  .projects-grid {
-    gap: 1.5rem;
+  .project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-company {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-tech {
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .project-link {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
   }
 }
 </style>

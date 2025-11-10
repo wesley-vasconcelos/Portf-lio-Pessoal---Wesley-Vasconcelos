@@ -163,12 +163,11 @@ const closeMenu = () => {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
   }
-  
+
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -177,30 +176,73 @@ const closeMenu = () => {
     background: rgba(15, 15, 35, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
+    padding: 2rem 1rem;
+    gap: 0.25rem;
     border-bottom: 1px solid var(--border-color);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
-  
+
   .nav-menu-active {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
   }
-  
-  .nav-link {
-    padding: 0.75rem 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
+
+  .nav-menu-active .nav-link {
+    animation: slideInFromLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
-  
-  .nav-link:last-child {
-    border-bottom: none;
+
+  .nav-menu-active .nav-link:nth-child(1) { animation-delay: 0.1s; }
+  .nav-menu-active .nav-link:nth-child(2) { animation-delay: 0.15s; }
+  .nav-menu-active .nav-link:nth-child(3) { animation-delay: 0.2s; }
+  .nav-menu-active .nav-link:nth-child(4) { animation-delay: 0.25s; }
+  .nav-menu-active .nav-link:nth-child(5) { animation-delay: 0.3s; }
+  .nav-menu-active .nav-link:nth-child(6) { animation-delay: 0.35s; }
+
+  .nav-link {
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 0.75rem;
+    margin: 0.125rem 0;
+    background: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    background: rgba(0, 212, 255, 0.08);
+    color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+    transform: translateX(8px) scale(1.02);
+  }
+
+  .nav-link.router-link-active {
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+    font-weight: 600;
+    transform: translateX(4px);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 }
 </style>

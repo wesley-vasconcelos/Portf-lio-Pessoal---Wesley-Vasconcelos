@@ -36,11 +36,10 @@ body {
 }
 
 main {
-  padding-top: 80px; /* Altura do navbar fixo */
+  padding-top: 80px;
   width: 100%;
 }
 
-/* Variáveis CSS customizadas - Tema Escuro */
 :root {
   --primary-color: #00d4ff;
   --secondary-color: #0099cc;
@@ -63,7 +62,6 @@ main {
   --transition: all 0.3s ease;
 }
 
-/* Utilitários */
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -167,7 +165,6 @@ main {
   border-color: var(--primary-color);
 }
 
-/* Efeitos especiais */
 .glow-text {
   text-shadow: 0 0 10px var(--primary-color);
 }
@@ -197,7 +194,12 @@ main {
   to { box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); }
 }
 
-/* Responsividade */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 0 1rem;
@@ -210,11 +212,19 @@ main {
   .btn {
     padding: 0.75rem 1.5rem;
   }
+
+  .card {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
   }
 
   .section {
